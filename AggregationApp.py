@@ -3,13 +3,8 @@
 
 # In[1]:
 
-
 import streamlit as st
 import pandas as pd
-
-
-# In[1]:
-
 
 # Set page title and icon
 st.set_page_config(page_title="Data Aggregation App", page_icon="📊")
@@ -26,7 +21,7 @@ if uploaded_file is not None:
     if file_extension == "csv":
         df = pd.read_csv(uploaded_file)
     elif file_extension == "xlsx":
-        df = pd.read_excel(uploaded_file)
+        df = pd.read_excel(uploaded_file, engine="openpyxl")
     else:
         st.error("Unsupported file format")
 
@@ -46,8 +41,6 @@ if uploaded_file is not None:
             elif aggregation_option == "AVG":
                 st.write(df[selected_columns].mean())
 
-
-# In[ ]:
 
 
 
