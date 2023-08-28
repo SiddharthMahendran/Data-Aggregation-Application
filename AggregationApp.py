@@ -9,10 +9,9 @@ import pandas as pd
 # Set page title and icon
 st.set_page_config(page_title="Data Aggregation App", page_icon="📊")
 
-# Apply a Streamlit built-in theme
 st.markdown("""
 <style>
-.theme-name {
+.light {
     background-color: #f0f0f0;
 }
 </style>
