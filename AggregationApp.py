@@ -9,14 +9,6 @@ import pandas as pd
 # Set page title and icon
 st.set_page_config(page_title="Data Aggregation App", page_icon="📊")
 
-st.markdown("""
-<style>
-.light {
-    background-color: #f0f0f0;
-}
-</style>
-""", unsafe_allow_html=True)
-
 # Load data
 uploaded_file = st.file_uploader("Upload a file", type=["csv", "xlsx"])
 
